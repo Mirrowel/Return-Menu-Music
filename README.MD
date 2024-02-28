@@ -2,7 +2,7 @@ Returns Music that is supposed to play in the menu when you press Escape. That i
 
 It uses the same music pool main menu has.
 
-Should work with all mods out there. Doesn't have any requirement.
+Should work with all mods out there. Doesn't have any requirements.
 
 Works with EGUI (script is disabled if it detects EGUI).
 
