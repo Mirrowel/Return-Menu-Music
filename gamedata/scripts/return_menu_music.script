@@ -9,6 +9,9 @@ if zzzzzz_mm_music then
 end
 
 function main_menu_on_init()
+	if experience_potions then
+		if (experience_ui.ui_is_opening) then return end
+	end
 	local xml = CScriptXmlInit()
 	xml:ParseFile("ui_mm_main_16.xml")
 	xml:NavigateToNode("menu_sound", 0)
@@ -31,6 +34,8 @@ function main_menu_on_init()
 	if not snd then return end
 
 	snd:play(db.actor,0,sound_object.s2d)
+	local vol = get_console_cmd(2,"snd_volume_music")
+	snd.volume = vol or 1
 
 end
 
